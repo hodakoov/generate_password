@@ -3,6 +3,14 @@
 {% block index %} Страница генерации пароля {% endblock %}
 
 {% block content %}
-    GENERATIOOOON!
+    <h2>Генерация пароля</h2>
+    <br>
+    <h3>Выберите требуемые символы</h3>
+    <form action="{% url 'password' %}">
+        <table>
+            {{ form}}
+        </table>
+    <input type = "submit" value = "Сгенерировать пароль">
+    </form>
 
 {% endblock %}

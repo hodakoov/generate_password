@@ -1,0 +1,15 @@
+{% extends 'generator/base.html' %}
+
+{% block title %} Страница сформированного пароля {% endblock %}
+
+{% block content %}
+    <form action="{% url 'password' %}">
+        <h2> Сформированный пароль </h2>
+        <h3> {{ password }}</h3>
+        <input type="button" value="Обновить пароль" onclick="location.reload()">
+    </form>
+<br>
+    <form action="{% url 'home' %}">
+        <input type = "submit" value = "Назад">
+    </form>
+{% endblock %}
