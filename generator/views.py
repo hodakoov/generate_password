@@ -24,4 +24,8 @@ def get_password(request):
     for i in range(int(length)):
         password += random.choice(data)
 
-    return render(request, 'generator/result.html', context={'password': password})
+    return render(request, 'generator/password.html', context={'password': password})
+
+
+def about(request):
+    return render(request, 'generator/about.html')

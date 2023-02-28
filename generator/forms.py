@@ -14,4 +14,4 @@ class PasswordForms(forms.Form):
                                         initial='8')
     uppercase = forms.BooleanField(label='Верхний регистр', required=False)
     numbers = forms.BooleanField(label='Цифры', required=False)
-    special_symbols  = forms.BooleanField(label='Специальные символы', required=False)
+    special_symbols = forms.BooleanField(label='Специальные символы', required=False)

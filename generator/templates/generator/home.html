@@ -1,16 +1,22 @@
 {% extends 'generator/base.html' %}
 
-{% block index %} Страница генерации пароля {% endblock %}
+{% block title %} Страница генерации пароля {% endblock %}
 
 {% block content %}
     <h2>Генерация пароля</h2>
     <br>
     <h3>Выберите требуемые символы</h3>
+    <h6>По умолчанию пароль формируется в нижнем регистре</h6>
     <form action="{% url 'password' %}">
-        <table>
-            {{ form}}
-        </table>
-    <input type = "submit" value = "Сгенерировать пароль">
+    <div class="container text-center">
+        <br>
+        {{form.length.label}} {{ form.length }}<br>
+        {{form.uppercase.label}} {{ form.uppercase }}<br>
+        {{form.numbers.label}} {{ form.numbers }}<br>
+        {{form.special_symbols.label}} {{ form.special_symbols }}<br>
+    </div>
+        <br>
+    <input type = "submit" value = "Сгенерировать пароль" class="btn btn-primary">
     </form>
 
 {% endblock %}
